@@ -6,7 +6,7 @@ import java.rmi.RemoteException;
 
 public interface IUserModelModuleConnection extends IModuleConnection {
 
-    IUserModelData createUser(String nickname, byte[] pass) throws RemoteException;
+    IUserModelData createUser(String nickname, String email, byte[] pass) throws RemoteException;
 
     boolean existsUserByUserId(long userId) throws RemoteException;
     boolean existsUserByKeyVal(Object key, Object val) throws RemoteException;
