@@ -1,3 +1,2 @@
 Manifest-Version: 1.0
 Base-Package: com.pro100kryto.server
-Connect-Modules: Crypt
