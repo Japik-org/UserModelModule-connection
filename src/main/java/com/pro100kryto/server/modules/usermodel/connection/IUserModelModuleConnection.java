@@ -6,12 +6,12 @@ import java.rmi.RemoteException;
 
 public interface IUserModelModuleConnection extends IModuleConnection {
 
-    IUserModelData createUser(String nickname, String email, byte[] pass) throws RemoteException;
+    IUserModel createUser(String username, byte[] pass) throws RemoteException, UserAlreadyExistsException;
 
     boolean existsUserByUserId(long userId) throws RemoteException;
     boolean existsUserByKeyVal(Object key, Object val) throws RemoteException;
 
-    IUserModelData getUserByUserId(long userId) throws RemoteException, UserNotFoundException;
-    IUserModelData getUserByKeyVal(Object key, Object val) throws RemoteException, UserNotFoundException;
-
+    IUserModel getUserByUserId(long userId) throws RemoteException, UserNotFoundException;
+    IUserModel getOneUserByKeyVal(Object key, Object val) throws RemoteException, UserNotFoundException;
+    Iterable<IUserModel> getUsersByKeyVal(Object key, Object val) throws RemoteException;
 }
