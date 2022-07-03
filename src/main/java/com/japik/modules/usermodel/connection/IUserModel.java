@@ -1,4 +1,4 @@
-package com.pro100kryto.server.modules.usermodel.connection;
+package com.japik.modules.usermodel.connection;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
